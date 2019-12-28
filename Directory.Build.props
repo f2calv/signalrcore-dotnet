@@ -1,0 +1,8 @@
+<Project>
+
+  <PropertyGroup>
+    <RootNamespace>CasCap</RootNamespace>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+</Project>
