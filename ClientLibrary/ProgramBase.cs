@@ -1,12 +1,9 @@
 ﻿using CasCap.Interfaces;
 using CasCap.Models;
-using MessagePack;
-using MessagePack.Resolvers;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,7 +19,7 @@ namespace CasCap
 
         protected static async Task Connect2Hub(string url = null)
         {
-            url = url ?? "https://localhost:5001/myhub";
+            url ??= "https://localhost:5001/myhub";
             connection = new HubConnectionBuilder()
                 .AddJsonProtocol(options =>
                 {
@@ -85,7 +82,7 @@ namespace CasCap
                 await connection.SendAsync(nameof(serverMethod.SendMessage), $"{msg}, sent via SendAsync");
             }
 
-            async Task<bool> ConnectWithRetryAsync(CancellationToken token = default)
+            static async Task<bool> ConnectWithRetryAsync(CancellationToken token = default)
             {
                 // Keep trying to until we can start or the token is canceled.
                 while (true)
@@ -104,7 +101,7 @@ namespace CasCap
                     {
                         // Failed to connect, trying again in 5000 ms.
                         Debug.Assert(connection.State == HubConnectionState.Disconnected);
-                        await Task.Delay(5000);
+                        await Task.Delay(5000, CancellationToken.None);
                     }
                 }
             }

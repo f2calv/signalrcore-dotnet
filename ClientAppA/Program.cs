@@ -1,7 +1,6 @@
 ﻿using CasCap.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
 namespace CasCap
 {
@@ -41,7 +40,6 @@ namespace CasCap
 
             while (true)
             {
-
                 var obj = new MyObject { str = Environment.MachineName, myenum = MyEnum.ABC, val1 = DateTime.UtcNow.Second, val2 = DateTime.UtcNow.Hour * DateTime.UtcNow.Second };
                 //await connection.InvokeAsync(nameof(serverMethod.SendMessage), obj);//waits for a completion message from the server
                 await connection.SendAsync(nameof(serverMethod.SendObject), obj);//fire and forget
