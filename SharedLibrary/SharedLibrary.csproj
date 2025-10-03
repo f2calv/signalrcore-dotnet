@@ -6,10 +6,10 @@
 
   <ItemGroup>
     <!--older working versions;-->
-    <!--<PackageReference Include="MessagePack" Version="1.7.3.7" />-->
-    <!--<PackageReference Include="MessagePack" Version="1.8.80" />-->
+    <!--<PackageReference Include="MessagePack" />-->
+    <!--<PackageReference Include="MessagePack" />-->
     <!--newer version failing;-->
-    <!--<PackageReference Include="MessagePack" Version="2.0.323" />-->
+    <!--<PackageReference Include="MessagePack" />-->
   </ItemGroup>
 
 </Project>
