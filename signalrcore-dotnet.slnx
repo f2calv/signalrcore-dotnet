@@ -1,7 +1,14 @@
 ﻿<Solution>
-  <Project Path="ClientAppA/ClientAppA.csproj" />
-  <Project Path="ClientAppB/ClientAppB.csproj" />
-  <Project Path="ClientLibrary/ClientLibrary.csproj" />
-  <Project Path="SharedLibrary/SharedLibrary.csproj" />
-  <Project Path="WebApp/WebApp.csproj" />
+  <Folder Name="/signalrcore-dotnet/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/signalrcore-dotnet/">
+    <Project Path="ClientAppA/ClientAppA.csproj" />
+    <Project Path="ClientAppB/ClientAppB.csproj" />
+    <Project Path="ClientLibrary/ClientLibrary.csproj" />
+    <Project Path="SharedLibrary/SharedLibrary.csproj" />
+    <Project Path="WebApp/WebApp.csproj" />
+  </Folder>
 </Solution>
