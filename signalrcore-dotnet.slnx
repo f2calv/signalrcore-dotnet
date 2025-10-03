@@ -5,10 +5,10 @@
     <File Path="Directory.Packages.props" />
   </Folder>
   <Folder Name="/signalrcore-dotnet/">
-    <Project Path="ClientAppA/ClientAppA.csproj" />
-    <Project Path="ClientAppB/ClientAppB.csproj" />
-    <Project Path="ClientLibrary/ClientLibrary.csproj" />
-    <Project Path="SharedLibrary/SharedLibrary.csproj" />
-    <Project Path="WebApp/WebApp.csproj" />
+    <Project Path="src/ClientAppA/ClientAppA.csproj" />
+    <Project Path="src/ClientAppB/ClientAppB.csproj" />
+    <Project Path="src/ClientLibrary/ClientLibrary.csproj" />
+    <Project Path="src/SharedLibrary/SharedLibrary.csproj" />
+    <Project Path="src/WebApp/WebApp.csproj" />
   </Folder>
 </Solution>
