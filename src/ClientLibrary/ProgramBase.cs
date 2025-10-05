@@ -3,10 +3,7 @@ using CasCap.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
 namespace CasCap;
 
 public abstract class ProgramBase
