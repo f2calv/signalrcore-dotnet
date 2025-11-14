@@ -3,18 +3,15 @@ using CasCap.Interfaces;
 using CasCap.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.SignalR;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Threading.Tasks;
 namespace CasCap.Pages;
 
 //https://docs.microsoft.com/en-us/aspnet/core/signalr/hubcontext?view=aspnetcore-3.1
 public class IndexModel : PageModel
 {
-    readonly ILogger<IndexModel> _logger;
+    private readonly ILogger<IndexModel> _logger;
 
     IHubContext<MyHub, IMyHubClient> _hubContext { get; }
-    //readonly IHubContext<ChatHub> _hubContext;
+    //private readonly IHubContext<ChatHub> _hubContext;
 
     public IndexModel(ILogger<IndexModel> logger,
         //IHubContext<ChatHub> hubContext

@@ -5,7 +5,7 @@ namespace CasCap;
 
 class Program : ProgramBase
 {
-    static async Task Main(string[] args)
+    private static async Task Main(string[] args)
     {
         //delay client startup to allow for hub to fully launch
         await DelayStartup();
