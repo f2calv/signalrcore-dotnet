@@ -4,12 +4,4 @@
     <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <!--older working versions;-->
-    <!--<PackageReference Include="MessagePack" />-->
-    <!--<PackageReference Include="MessagePack" />-->
-    <!--newer version failing;-->
-    <!--<PackageReference Include="MessagePack" />-->
-  </ItemGroup>
-
 </Project>
