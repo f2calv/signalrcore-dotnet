@@ -1,0 +1,18 @@
+{
+  "name": "SignalR Core .NET",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:2-10.0-noble",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/pre-commit:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "editorconfig.editorconfig",
+        "github.vscode-github-actions",
+        "ms-dotnettools.csdevkit",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+}
