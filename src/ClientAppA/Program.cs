@@ -1,6 +1,7 @@
-∩╗┐using CasCap.Models;
+﻿using CasCap.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 namespace CasCap;
 
@@ -43,10 +44,7 @@ class Program : ProgramBase
             var obj = new MyObject { str = Environment.MachineName, myenum = MyEnum.ABC, val1 = DateTime.UtcNow.Second, val2 = DateTime.UtcNow.Hour * DateTime.UtcNow.Second };
             //await connection.InvokeAsync(nameof(serverMethod.SendMessage), obj);//waits for a completion message from the server
             await connection.SendAsync(nameof(serverMethod.SendObject), obj);//fire and forget
-            await Task.Delay(new Random().Next(0, 5) * 1000);
+            await Task.Delay(RandomNumberGenerator.GetInt32(0, 5) * 1000);
         }
-
-
     }
 }
-

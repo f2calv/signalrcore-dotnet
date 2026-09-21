@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using System.Security.Cryptography;
 namespace CasCap;
 
 public abstract class ProgramBase
@@ -51,7 +52,7 @@ public abstract class ProgramBase
         {
             Debug.Assert(connection.State == HubConnectionState.Disconnected);
             // Notify users the connection has been closed or manually try to restart the connection.
-            await Task.Delay(new Random().Next(0, 5) * 1000);
+            await Task.Delay(RandomNumberGenerator.GetInt32(0, 5) * 1000);
             IsConnected = await ConnectWithRetryAsync();
             //return Task.CompletedTask;
         };
