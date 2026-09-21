@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
+∩╗┐using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Threading.Tasks;
 namespace CasCap;
@@ -20,7 +20,6 @@ class Program : ProgramBase
             await Task.Delay(new Random().Next(0, 5) * 1000);
         }
 
-        Console.WriteLine("hit any key to exit...");
-        Console.ReadKey();
     }
 }
+

@@ -1,4 +1,4 @@
-﻿using CasCap.Models;
+∩╗┐using CasCap.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Threading.Tasks;
@@ -46,9 +46,7 @@ class Program : ProgramBase
             await Task.Delay(new Random().Next(0, 5) * 1000);
         }
 
-        //todo: performance tests between InvokeAsync & SendObject
 
-        Console.WriteLine("hit any key to exit...");
-        Console.ReadKey();
     }
 }
+
