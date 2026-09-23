@@ -69,7 +69,7 @@ public class Startup
 
         app.UseEndpoints(endpoints =>
         {
-            endpoints.MapHub<MyHub>("/myhub", options=>
+            endpoints.MapHub<MyHub>("/myhub", options =>
             {
             });
             //endpoints.MapHub<MyHub>("/myhub", options =>
