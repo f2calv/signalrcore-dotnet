@@ -8,17 +8,14 @@ namespace CasCap.Pages;
 //https://docs.microsoft.com/en-us/aspnet/core/signalr/hubcontext?view=aspnetcore-3.1
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
-
     IHubContext<MyHub, IMyHubClient> _hubContext { get; }
     //private readonly IHubContext<ChatHub> _hubContext;
 
-    public IndexModel(ILogger<IndexModel> logger,
+    public IndexModel(
         //IHubContext<ChatHub> hubContext
         IHubContext<MyHub, IMyHubClient> hubContext
         )
     {
-        _logger = logger;
         _hubContext = hubContext;
     }
 
